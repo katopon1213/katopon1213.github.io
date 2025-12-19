@@ -1,0 +1,281 @@
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.icongen {
+    width: 48px;
+    height: auto;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.biggen {
+    width: 100vw;
+    height: auto;
+    display: block;
+}
+
+.menu2 {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-aligin: center;
+}
+
+.menu2 h2{
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.menu-list {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.menu-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+menu-item h3 {
+    margin: 12px 0 0.4px;
+    font-size: 16px;
+}
+
+menu-item p {
+    margin-bottom: 12px;
+    color: #666;
+}
+
+.menu-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px
+    rgba(0,0,0,0.15);
+}
+
+.menu-item:hover img {
+    transform: scale(1.05);
+}
+
+.staff {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.staff h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.staff-list {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.staff-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    treansition: 0.3s;
+    cursor: pointer;
+}
+
+.staff-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.staff-item h3 {
+    margin: 12px 0 4px;
+    font-size: 16px;
+}
+
+.staff-item p {
+    margin-bottom: 12px;
+    color: #666;
+    font-size: 14px;
+}
+
+.staff-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px
+    rgba(0,0,0,0.15);
+}
+
+.staff-item:hover img {
+    transform: scale(1.05);
+}
+
+.contact {
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact-text {
+    color: #666
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 30px;
+    padding-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0.0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.font-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s;    
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #8b6a4f;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #72543d;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* ヘッダー */
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav {
+        display: flex;
+        gap: 15px;
+    }
+
+    .nav a {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    /* メイン画像 */
+    .biggen {
+        width: 100%;
+        height: auto;
+    }
+
+    /* メニュー */
+    .menu-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-item img {
+        height: 140px;
+    }
+
+    /* スタッフ */
+    .staff-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .staff-item img {
+        height: 160px;
+    }
+
+    /* お問い合わせ */
+    .contact {
+        margin: 40px auto;
+        padding: 20px 15px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact h2 {
+        font-size: 22px;
+    }
+}
+
+/* =========================
+   さらに小さいスマホ（480px以下）
+========================= */
+@media screen and (max-width: 480px) {
+
+    /* ナビ */
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* メニュー & スタッフを1列に */
+    .menu-list,
+    .staff-list {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item img,
+    .staff-item img {
+        height: 180px;
+    }
+
+    /* 見出し調整 */
+    h2 {
+        font-size: 20px;
+    }
+}
